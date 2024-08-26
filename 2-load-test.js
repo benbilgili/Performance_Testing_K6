@@ -3,8 +3,8 @@ import {sleep, check} from 'k6';
 
 export const options = {
     stages: [
-        {duration: '5s', target: 200}, // gradually increase the number of users to 200 over 5 seconds. (target = requests per second)
-        {duration: '10s', target: 200}, // maintain 200 users for 10 seconds.
+        {duration: '5s', target: 500}, // gradually increase the number of users to 500 over 5 seconds. (target = requests per second)
+        {duration: '10s', target: 500}, // maintain 500 users for 10 seconds.
         {duration: '5s', target: 0}, // gradually reduce the number of users to 0 over 5 seconds.
     ],
     thresholds: {

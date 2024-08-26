@@ -1,16 +1,16 @@
 import http from 'k6/http';
 import {sleep, check} from 'k6';
 
-// we are gradually increasing the number of users (200 - 800 - 1000)
+// we are gradually increasing the number of users (500 - 2000 - 5000)
 
 export const options = {
     stages: [
-        {duration: '5s', target: 200}, // ramp up
-        {duration: '10s', target: 200}, // stable
-        {duration: '5s', target: 800}, // ramp up
-        {duration: '10s', target: 800}, // stable
-        {duration: '5s', target: 1000}, // ramp up
-        {duration: '10s', target: 1000}, // stable
+        {duration: '5s', target: 500}, // ramp up
+        {duration: '10s', target: 500}, // stable
+        {duration: '5s', target: 2000}, // ramp up
+        {duration: '10s', target: 2000}, // stable
+        {duration: '5s', target: 5000}, // ramp up
+        {duration: '10s', target: 5000}, // stable
         {duration: '10s', target: 0}, // ramp down
     ],
     thresholds: {
